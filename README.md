@@ -7,7 +7,7 @@ Bu layihə viral mahnılar dataset-i üzərində məlumatların ilkin araşdır�
 Layihənin əsas notebook-u:
 
 ```text
-viralsongs_analysis.ipynb
+viral_songs_analysis.ipynb
 ```
 
 ## Layihənin məqsədləri
@@ -23,15 +23,6 @@ viralsongs_analysis.ipynb
 - Seçilmiş numeric feature-lərə scaling tətbiq etmək
 - Hazır datasetləri CSV formatında saxlamaq
 
-## İstifadə olunan texnologiyalar
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
 
 ## Dataset
 
@@ -43,23 +34,7 @@ DATA_PATH = "/content/viral_songs.csv"
 
 Bu yol Google Colab mühitinə uyğundur. Notebook-u lokal kompüterdə və ya başqa mühitdə işlətmək üçün `DATA_PATH` dəyişənini `viral_songs.csv` faylının yerləşdiyi yerə uyğun dəyişin.
 
-> Qeyd: Dataset bu repository-yə daxil edilməyibsə, notebook-u işlətməzdən əvvəl `viral_songs.csv` faylını əldə edib düzgün yola yerləşdirmək lazımdır.
 
-## Layihənin strukturu
-
-Tövsiyə olunan repository strukturu:
-
-```text
-viral-songs-analysis/
-│
-├── README.md
-├── viralsongs_analysis.ipynb
-└── viral_songs.csv
-```
-
-CSV dataset-i paylaşılmırsa, sonuncu faylı repository-yə əlavə etməyin; onun əldə olunma mənbəyini README-də qeyd edin.
-
-## Analiz prosesi
 
 ### 1. İlkin məlumatların araşdırılması
 
@@ -136,21 +111,3 @@ Final mərhələdə train və test datasetləri yoxlanılır:
 
 Notebook-un export bölməsində hazırlanmış datasetləri CSV formatında saxlamaq nəzərdə tutulur. Yaradılan faylların dəqiq adları notebook-un son export hüceyrəsində göstərilir.
 
-## Vacib metodoloji qeyd
-
-Əgər `viral` hədəf etiketi `streams` sütununa əsasən yaradılıbsa, `streams`-in model feature-i kimi saxlanılması target leakage yarada bilər. Buna görə model qurulmazdan əvvəl hədəfin necə müəyyənləşdirildiyini yoxlamaq və real proqnoz ssenarisinə uyğun feature seçmək lazımdır. Notebook-da `DROP_STREAMS` parametri bu qərarı idarə etmək üçün mövcuddur.
-
-## Notebook-u necə işlətmək olar?
-
-1. Repository-ni clone edin və ya faylları yükləyin.
-2. Lazımi Python kitabxanalarının quraşdırıldığı mühit yaradın.
-3. `viral_songs.csv` faylını notebook-da göstərilən yola yerləşdirin və ya `DATA_PATH` parametrini dəyişdirin.
-4. `viralsongs_analysis.ipynb` faylını Jupyter Notebook, JupyterLab və ya VS Code-da açın.
-5. Notebook-u yuxarıdan aşağıya ardıcıllıqla icra edin.
-6. Final yoxlama və export hüceyrələrinin uğurla işlədiyini təsdiqləyin.
-
-## Nəticə
-
-Bu notebook viral mahnılar dataset-i üçün data inspection, cleaning, feature engineering, EDA, encoding, multikolinearlıq analizi, train/test split və scaling mərhələlərini bir araya gətirir. Hazırlanmış dataset növbəti machine-learning mərhələsində istifadə oluna bilər.
-
-Layihə hazırda əsasən data analysis və preprocessing prosesinə fokuslanır; notebook-da ayrıca modelin təlimi və performans qiymətləndirilməsi həyata keçirildiyi iddia edilmir.
